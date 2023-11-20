@@ -1,7 +1,7 @@
 # bancoDadosProjetoC3
 ## Sistema de Gestão de Ordens de serviço
 
-Esse sistema é composto por um conjunto de tabelas como: clientes, ordens de serviço, peças utilizadas, peças, técnicos.
+Esse sistema é composto por um conjunto de tabelas que representam ordens de serviços geradas após algum tipo de manutenção.
 
 O sistema exige que as tabelas existam, então basta executar o script Python a seguir para criação das tabelas e preenchimento de dados de exemplos:
 ```shell
