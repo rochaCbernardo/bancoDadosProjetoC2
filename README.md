@@ -12,7 +12,7 @@ Para executar o sistema basta executar o script Python a seguir:
 ~$ python principal.py
 ```
 ## Organização
-- [diagramas](diagramas): Nesse diretório está o [diagrama relacional](diagrama/Diagrama_BD_Trabalho.pdf) do sistema.
+- [diagramas](diagramas): Nesse diretório está o [diagrama relacional](diagramas/Diagrama_BD_Trabalho.pdf) do sistema.
     * O sistema possuí 5 entidades, sendo elas: clientes, tecnico, ordem_servico, pecas e pecas_utilizadas.
 - [src](src): Nesse diretório estão os scripts do sistema
     * [conexion](src/conexion): Nesse repositório encontra-se o módulo de conexão com o banco de dados Mongo. Esses módulo do Mongo apenas realiza a conexão, os métodos CRUD e de recuperação de dados são implementados diretamente nos objetos controladores (Controllers) e no objeto de Relatório (reports).
