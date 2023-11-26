@@ -126,7 +126,7 @@ Para executar o sistema basta executar o script Python a seguir:
            input("Pressione Enter para Sair do Relatório de Peças Utilizadas..")   
            ```
     * [utils](src/utils): Nesse diretório encontram-se scripts de configuração e automatização da tela de informações iniciais.
-    * [create_collections_and_data.py](src/createCollectionsAndData.py): Script responsável por criar as tabelas e registros fictícios. Esse script deve ser executado antes do script principal.py para gerar as tabelas, caso não execute os scripts diretamente no SQL Developer ou em alguma outra IDE de acesso ao Banco de Dados.
+    * [createCollections.py](src/createCollections.py): Script responsável por criar as tabelas e registros fictícios. Esse script deve ser executado antes do script principal.py para gerar as tabelas, caso não execute os scripts diretamente no SQL Developer ou em alguma outra IDE de acesso ao Banco de Dados.
     * [principal.py](src/principal.py): Script responsável por ser a interface entre o usuário e os módulos de acesso ao Banco de Dados. Deve ser executado após a criação das tabelas.
 
 ### Bibliotecas Utilizadas
