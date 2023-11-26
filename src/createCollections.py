@@ -2,7 +2,7 @@ import logging
 from conexion.mongoQueries import MongoQueries
 import json
 
-LIST_OF_COLLECTIONS = ["clientes", "tecnico", "ordem_servico", "peca", "pecas_utilizadas"]
+LIST_OF_COLLECTIONS = ["clientes", "tecnicos", "ordens_servico", "pecas", "pecas_utilizadas"]
 logger = logging.getLogger(name="Example_CRUD_MongoDB")
 logger.setLevel(level=logging.WARNING)
 mongo = MongoQueries()
