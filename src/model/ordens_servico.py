@@ -15,7 +15,7 @@ class OrdemServico:
         self.set_ordem_id(ordem_id)
         self.set_cliente_id(cliente_id)
         self.set_tecnico_id(tecnico_id)
-        self.set_codigo_peca_utilizada(cod_peca_utilizada)
+        self.set_cod_peca_utilizada(cod_peca_utilizada)
         self.set_data_abertura(data_abertura)
         self.set_data_conclusao(data_conclusao)
         self.set_statusOs(status_os)
@@ -70,4 +70,4 @@ class OrdemServico:
         return self.custo_total
 
     def to_string(self) -> str:
-        return f"Ordem de Serviço ID: {self.ordem_id} | Cliente ID: {self.cliente_id} | Tecnico ID: {self.tecnico_id} | Código peça utilizada: {self.codigo_peca_utilizada} | Data de abertura: {self.data_abertura}| Data de conclusão: {self.data_conclusao} | Custo total: {self.custo_total} "
+        return f"Ordem de Serviço ID: {self.ordem_id} | Cliente ID: {self.cliente_id} | Tecnico ID: {self.tecnico_id} | Código peça utilizada: {self.cod_peca_utilizada} | Data de abertura: {self.data_abertura}| Data de conclusão: {self.data_conclusao} | Custo total: {self.custo_total} "
