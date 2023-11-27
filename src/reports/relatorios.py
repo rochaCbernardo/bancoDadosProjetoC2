@@ -67,7 +67,7 @@ class Relatorio:
         mongo = MongoQueries()
         mongo.connect()
 
-        query_result = mongo.db.ordens_servico.aggregate([{'$lookup':{'from':'clientes',
+        query_result = mongo.db["ordens_servico"].aggregate([{'$lookup':{'from':'clientes',
                                                                         'localField': 'cliente_id',
                                                                         'foreignField': 'cliente_id',
                                                                         'as': 'cliente_id'
@@ -97,7 +97,8 @@ class Relatorio:
                                                                         '$unwind':{'path': '$cod_peca_utilizada'}
                                                                     },
                                                                     {
-                                                                        '$project':{                                                               'ordem_id': 1,
+                                                                        '$project':{                                                               
+                                                                        'ordem_id': 1,
                                                                         'cliente': "$cliente_id.nome",
                                                                         'tecnico': "$tecnico_id.nome",
                                                                         'cod_peca_utilizada': "$cod_peca_utilizada.codigo",
@@ -105,7 +106,6 @@ class Relatorio:
                                                                         'data_conclusao': 1,
                                                                         'status_os': 1,
                                                                         'valor_tecnico': "$tecnico_id.valor_os",
-                                                                        'quant_pecas_utilizadas': "$cod_peca_utilizada.quant_utilizada",
                                                                         'custo_toal': 1,
                                                                         '_id':0
                                                                         }
@@ -114,7 +114,7 @@ class Relatorio:
 
         mongo.close()
 
-        print(dfOsConsolidada[["ordem_id", "cliente", "tecnico", "cod_peca_utilizada", "data_abertura", "data_conclusao", "status_os", "valor_tecnico", "quant_pecas_utilizadas", "custo_total"]])
+        print(dfOsConsolidada[["ordem_id", "cliente", "tecnico", "cod_peca_utilizada", "data_abertura", "data_conclusao", "status_os", "valor_tecnico", "custo_total"]])
         input("Pressione Enter para Sair do Relatório de OS consolidadas..")
 
     def get_relatorioPecasUtilizadas(self):
